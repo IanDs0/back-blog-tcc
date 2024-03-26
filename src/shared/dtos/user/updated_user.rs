@@ -5,10 +5,10 @@ use crate::core::enum_type::user::Level;
 
 #[derive(Deserialize, Serialize)]
 #[serde(crate = "rocket::serde")]
-pub struct CreatedUserDto {
-    pub id: Uuid,
-    pub user_tag: String,
-    pub level: Level,
-    pub email: String,
+pub struct UpdatedUserDto {
+    pub id: Option<Uuid>,
+    pub user_tag: Option<String>,
+    pub level: Option<Level>,
+    pub email: Option<String>,
     pub password: Option<String>,
 }
